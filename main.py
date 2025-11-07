@@ -1,6 +1,8 @@
 ### Mad Libs
 ### Story generator
 
+import random
+
 # Print possible stories
 print("\n")
 print("Mad Libs")
@@ -21,11 +23,14 @@ print("\n")
 
 # Select story
 while True:
-    input_text = input("Select story [1,2 or 3]: ")
-    if input_text in ["1","2","3"]:
+    input_text = input("Select story [1,2,3 or 4 (random)]: ")
+    if input_text in ["1","2","3","4"]:
         story = input_text
         break
     print("Invalid input, try again")
+
+if story == "4":
+    story = random.choice(["1", "2", "3"])
 
 print("Selected story: ", story)
 
@@ -77,7 +82,7 @@ elif story == "2":
 
 elif story == "3":
 
-    name = input("Input a name: ")
+    name = input("Input a person's name: ")
     adjective = input("Input an adjective: ")
     color = input("Input a color: ")
     animal = input("Input a animal: ")
