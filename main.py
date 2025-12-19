@@ -46,7 +46,8 @@ def input_num(prompt):
         out = input(prompt)
         if out.isnumeric():
             return out
-        print("Invalid input, enter only numbers")
+        print("Invalid input, enter a positive integer")
+
 # Generate story
 if story == "1":
     number = input_num("Input a number: ")
